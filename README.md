@@ -1,4 +1,3 @@
-```markdown
 # Campaña para sorteo - Aventira Motors
 
 Este proyecto es una aplicación web para una campaña de sorteo de Aventira Motors, desarrollada con Next.js, TypeScript y Tailwind CSS.
@@ -86,4 +85,4 @@ Para ejecutar el proyecto utilizando Docker, sigue estos pasos:
    docker-compose up campaign-am --build
    ```
 
-4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación.
+5. Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación.
