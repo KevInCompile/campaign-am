@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
       <a
         className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-        href=""
+        href="https://github.com/KevInCompile/campaign-am"
         target="_blank"
         rel="noopener noreferrer"
       >
