@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+```markdown
+# Campaña para sorteo - Aventira Motors
 
-## Getting Started
+Este proyecto es una aplicación web para una campaña de sorteo de Aventira Motors, desarrollada con Next.js, TypeScript y Tailwind CSS.
 
-First, run the development server:
+## Inicialización del Proyecto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Para iniciar el proyecto, sigue estos pasos:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Clona el repositorio:
+   ```
+   git clone https://github.com/tu-usuario/campaign-am.git
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. Navega al directorio del proyecto:
+   ```
+   cd campaign-am
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Instala las dependencias:
+   ```
+   npm install
+   ```
 
-## Learn More
+4. Inicia el servidor de desarrollo:
+   ```
+   npm run dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+5. Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Estructura del Proyecto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+El proyecto está organizado de la siguiente manera:
 
-## Deploy on Vercel
+- `/src/app`: Contiene los componentes principales y páginas de la aplicación.
+- `/src/app/form-register`: Directorio específico para el formulario de registro.
+  - `/hooks`: Contiene hooks personalizados, como `useForm`.
+  - `/libs`: Bibliotecas y datos estáticos.
+  - `/models`: Definiciones de tipos y modelos.
+  - `/utils`: Utilidades como expresiones regulares y estados iniciales.
+- `/src/app/models`: Modelos de datos globales.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Características Principales
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Formulario de registro con validación en tiempo real.
+- Manejo de estado con React Hooks.
+- Validación de campos utilizando expresiones regulares.
+- Uso de TypeScript para tipado estático.
+- Estilizado con Tailwind CSS para un diseño responsive.
+- Notificaciones de usuario con la biblioteca Sonner.
+
+## Lógica y Separación de Responsabilidades
+
+- La lógica del formulario está encapsulada en el hook personalizado `useForm`.
+- Los tipos y modelos están definidos en archivos separados para mejorar la reutilización y el mantenimiento.
+- Las utilidades como expresiones regulares y estados iniciales están separadas en archivos dentro de `/utils`.
+- La página principal (`page.tsx`)
+
+## Tecnologías Utilizadas
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Sonner (para notificaciones)
+
+## Ejecutar con Docker
+
+Para ejecutar el proyecto utilizando Docker, sigue estos pasos:
+
+1. Asegúrate de tener Docker instalado en tu sistema.
+
+2. Construye la imagen Docker:
+   ```
+   docker build -t campaign-am .
+   ```
+
+3. Ejecuta el contenedor:
+   ```
+   docker run -p 3000:3000 campaign-am
+   ```
+
+4. O puedes ejecutar:
+   ```
+   docker-compose up campaign-am --build
+   ```
+
+4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación.
